@@ -1,8 +1,13 @@
 #!/usr/bin/python3
-def replace_in_list(my_list, idx, element):
-    if idx < 0:
-        return(my_list)
-    if idx > my_list:
-        return(my_list)
+if __name__ == "__main__":
+    from sys import argv
+    length = len(argv) - 1
+    if length > 0:
+        if length == 1:
+            print("{} argument:".format(length))
+        else:
+            print("{} arguments:".format(length))
+        for i in range(1, len(argv)):
+            print("{}: {}".format(i, argv[i]))
     else:
-        return (my_list)
+        print("{} arguments.".format(length))
