@@ -1,23 +1,17 @@
 #!/usr/bin/python3
-"""
-    adds two int together and defining expections
+"""Function that adds 2 integers.
 
-    Args:
-        a, b = integers
-        b = 98
+Returns:
+        _type_: the sum of a and b
 """
 
 
 def add_integer(a, b=98):
+    """ Add 2 integers
+    Sum of a and b
     """
-    add two ints
-    """
-    if not isinstance(a, (int, float)):
+    if isinstance(a, (int, float)) is False:
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+    if isinstance(b, (int, float)) is False:
         raise TypeError("b must be an integer")
-
-    a1 = int(a)
-    b1 = int(b)
-
-    return a1 + b1
+    return int(a + b)

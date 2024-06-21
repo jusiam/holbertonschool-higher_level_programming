@@ -8,6 +8,15 @@ def matrix_divided(matrix, div):
     Args:
         matrix (list): matrix to divide
         div (int, float): number to divide by
+
+    Raises:
+        TypeError: div must be a number
+        ZeroDivisionError: division by zero
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+        TypeError: Each row of the matrix must have the same size
+
+    Returns:
+        _type_: a new matrix with the result of the division
     """
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
