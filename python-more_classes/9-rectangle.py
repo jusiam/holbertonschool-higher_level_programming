@@ -71,4 +71,3 @@ class Rectangle:
 
     def square(cls, size=0):
         return Rectangle(cls, cls)
-    
