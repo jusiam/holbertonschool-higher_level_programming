@@ -6,3 +6,6 @@ and then saves them to a file.
 """
 
 def pascal_triangle(n)
+
+if n <= 0:
+    return []
