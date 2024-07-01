@@ -1,20 +1,27 @@
 #!/usr/bin/python3
+"""Pascal's triangle task 12"""
 
-"""
-This script adds all arguments to a Python list,
-and then saves them to a file.
-"""
 
 def pascal_triangle(n):
-  height = int(input("Enter height of triangle: "))
-  triangle = []
-  row = []
-  prev_row = []
-  for i in xrange(0, height + 1):
-    row = [j > 0 and j < i - 1 and i > 2 and prev_row[j-1] + prev_row[j] or 1 for j in xrange(0, i)]
-    prev_row = row
-    triangle += [row]
-  return triangle[1:]
+    """
+    gives list of lists of ints
+    representing the Pascal’s triangle
 
-if n <= 0:
+    Args:
+        n(int)
+
+    Returns:
+        Pascal's Triangle
+    """
+    if n > 0:
+        l_pascal = [[1]]
+        for i in range(n - 1):
+            my_list = [1]
+            if i > 0:
+                n = len(l_pascal)
+                for j in range(n - 1):
+                    my_list.append(l_pascal[i][j] + l_pascal[i][j + 1])
+            my_list.append(1)
+            l_pascal.append(my_list)
+        return l_pascal
     return []
