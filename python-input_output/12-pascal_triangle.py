@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Pascal's triangle task 12"""
 
-
 def pascal_triangle(n):
     """
     gives list of lists of ints
