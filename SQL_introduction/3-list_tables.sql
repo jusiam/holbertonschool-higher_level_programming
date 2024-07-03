@@ -1,2 +1,2 @@
 -- Create database:
-SHOW TABLE FROM DATABASES mysql;
+SHOW TABLES FROM DATABASES mysql;

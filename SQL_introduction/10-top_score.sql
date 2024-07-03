@@ -1,2 +1,2 @@
--- Comment td
-SHOW table first_table FROM database hbtn_0c_0;
+-- lists all records of the table
+SELECT score, name FROM second_table ORDER BY score DESC;

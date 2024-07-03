@@ -1,2 +1,2 @@
--- Comment td
-SHOW table first_table FROM database hbtn_0c_0;
+-- Comment
+DELETE FROM table second_table FROM database hbtn_0c_0 WHERE score <= 5;
