@@ -1,2 +1,3 @@
--- Comment td
-SHOW table first_table FROM database hbtn_0c_0;
+-- Comment
+insert into first_table (id, name)
+values (89, 'Best School');

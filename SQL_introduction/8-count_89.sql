@@ -1,2 +1,2 @@
--- Comment td
-SHOW table first_table FROM database hbtn_0c_0;
+-- Comment
+COUNT * WHERE id = 89 FROM table first_table FROM database hbtn_0c_0;

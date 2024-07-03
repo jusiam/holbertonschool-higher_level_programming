@@ -1,2 +1,2 @@
--- Comment
-SHOW table first_table FROM database hbtn_0c_0;
+-- Prints the full description of the table first_table.
+SHOW CREATE TABLE `first_table`;
