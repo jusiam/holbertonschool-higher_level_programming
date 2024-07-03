@@ -1,2 +1,2 @@
 -- Comment
-SELECT COUNT * WHERE id = 89 FROM table first_table FROM database hbtn_0c_0;
+SELECT COUNT * FROM table first_table WHERE id = 89;
