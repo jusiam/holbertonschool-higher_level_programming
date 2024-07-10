@@ -1,3 +1,4 @@
--- Comment
-SELECT cities.id, cities.name, states.name, from cities FROM hbtn_0d_usa 
+-- List all cities along with their states
+SELECT cities.id, cities.name, states.name
+FROM cities
 ORDER BY cities.id ASC;
