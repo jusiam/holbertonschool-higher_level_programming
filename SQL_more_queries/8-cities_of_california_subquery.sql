@@ -1,5 +1,5 @@
--- Comment
-SELECT id, name from cities 
-WHERE name = 'California' 
-FROM hbtn_0d_usa 
+-- Query to list all cities of California without using JOIN
+SELECT id, name
+FROM cities
+WHERE name = 'California'
 ORDER BY id ASC;
