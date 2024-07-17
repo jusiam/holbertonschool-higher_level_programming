@@ -1,10 +1,26 @@
 #!/usr/bin/python3
-"""lists all states from the database hbtn_0e_0_usa"""
+"""
+This module connects to a MySQL database and retrieves
+all states sorted by id in ascending order.
+"""
+
 import MySQLdb
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    """
+    Connects to a MySQL server running on localhost at port 3306.
+    Takes three arguments: mysql username, mysql password, and database name.
+    Executes a query to fetch all states from the database and prints each row.
+    """
+    db = MySQLdb.connect(host="localhost",
+                         user=argv[1],
+                         passwd=argv[2],
+                         db=argv[3])
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
-    [print(state) for state in cur.fetchall()]
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+    cur.close()
+    db.close()
