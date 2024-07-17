@@ -1,18 +1,37 @@
 #!/usr/bin/python3
-"""module show all values in the table 'states'"""
+"""Module that prints all states by ASCENDING order"""
+
 
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
+    """
+    Get MySQL username, password, and database
+    name from command line arguments
+    """
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
+    state_name_searched = sys.argv[4]
 
-    bdd = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                          passwd=sys.argv[2], db=sys.argv[3])
-    cursor = bdd.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE '{}'"
-                   "ORDER BY states.id LIMIT 2".format(sys.argv[4]))
-    rows = cursor.fetchall()
+    db = MySQLdb.connect(
+                        host="localhost",
+                        port=3306,
+                        user=mysql_username,
+                        password=mysql_password,
+                        database=database_name
+                        )
+
+    c = db.cursor()
+    c.execute("""SELECT * FROM states WHERE
+              name LIKE '{}'
+              ORDER BY id ASC""".format(state_name_searched))
+
+    rows = c.fetchall()
+
     for row in rows:
         print(row)
-    cursor.close()
-    bdd.close()
+
+    c.close()
+    db.close()
