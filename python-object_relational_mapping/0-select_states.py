@@ -4,6 +4,7 @@ This module connects to a MySQL database and retrieves
 all states sorted by id in ascending order.
 """
 
+
 import MySQLdb
 from sys import argv
 
